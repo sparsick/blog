@@ -9,7 +9,7 @@ disabled = false
 simple = true
 
 [privacy.twitter]
-disabled = false
+disabled = true
 enableDNT = true
 simple = true
 disableInlineCSS = true
