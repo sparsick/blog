@@ -19,12 +19,8 @@ categories:
   - Windows
 tags:
   - bash
-  - Continuous Integration
   - jenkins
-  - Linux
-  - PowerShell
   - scripting
-  - Windows
 
 # comment: false # Disable comment if false.
 ---

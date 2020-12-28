@@ -19,9 +19,6 @@ categories:
 tags:
   - apache2
   - configuration
-  - Continuous Integration
-  - Nexus
-  - Node.js
   - npm
   - npm registry
   - proxy

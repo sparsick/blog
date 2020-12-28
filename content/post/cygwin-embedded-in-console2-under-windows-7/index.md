@@ -14,15 +14,14 @@ codeLineNumbers: false # Override global value for showing of line numbers withi
 figurePositionShow: true # Override global value for showing the figure label.
 categories:
   - Linux
+  - Windows
 tags:
   - bash
   - cmd
   - console2
   - cygwin
   - linux
-  - Linux
   - shell
-  - Windows
 
 # comment: false # Disable comment if false.
 ---

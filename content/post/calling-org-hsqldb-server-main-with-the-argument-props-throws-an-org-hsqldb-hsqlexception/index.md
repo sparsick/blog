@@ -17,8 +17,6 @@ categories:
   - JVM
 tags:
   - hsqldb
-  - Java
-  - JVM
 
 # comment: false # Disable comment if false.
 ---

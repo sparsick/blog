@@ -16,10 +16,8 @@ categories:
   - Java
   - Spring Framework
 tags:
-  - Java
   - jndi
   - spring
-  - Spring Framework
 
 # comment: false # Disable comment if false.
 ---

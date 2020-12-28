@@ -16,7 +16,6 @@ categories:
   - Java
 tags:
   - commons-vfs
-  - Java
   - jsch
   - sftp
   - ssh

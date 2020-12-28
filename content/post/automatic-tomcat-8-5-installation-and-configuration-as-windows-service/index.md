@@ -20,11 +20,8 @@ tags:
   - automation
   - cmd
   - configuration
-  - Continuous Integration
   - installation
-  - JVM
   - tomcat
-  - Windows
 
 # comment: false # Disable comment if false.
 ---

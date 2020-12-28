@@ -15,9 +15,6 @@ figurePositionShow: true # Override global value for showing the figure label.
 categories:
   - PowerShell
   - Windows
-tags:
-  - PowerShell
-  - Windows
 
 # comment: false # Disable comment if false.
 ---
