@@ -1,0 +1,8 @@
+---
+title: 'OpenVPN Installation and Configuration on Debian 8'
+date: 
+draft: true
+tags: ['debian', 'linux', 'Linux', 'openvpn']
+---
+
+    Installation and Configuration the server part Preparation https://help.ubuntu.com/lts/serverguide/openvpn.html   Server Seite (Debian 8) ----------------------- https://wiki.ubuntuusers.de/OpenVPN/ Openvpn als daemon laufen lassen: http://unix.stackexchange.com/questions/148990/using-openvpn-with-systemd im temp.d statt root openvpn benutzt Ovpn Generieren für Client seite ca.crt vom server -------------------------------- # cd /etc/openvpn # cp /usr/share/doc/openvpn/examples/sample-config-files/client.conf client.ovpn # echo "set CLIENT\_CERT 0" >> client.ovpn # echo "<ca>" >> client.ovpn # cat ca.crt | grep -A 100 "BEGIN CERTIFICATE" | grep -B 100 "END CERTIFICATE" >> client.ovpn # echo "</ca>" >> client.ovpn # echo "<cert>" >> client.ovpn # cat client.crt | grep -A 100 "BEGIN CERTIFICATE" | grep -B 100 "END CERTIFICATE" >> client.ovpn # echo "</cert>" >> client.ovpn # echo "<key>" >> client.ovpn # cat client.key | grep -A 100 "BEGIN PRIVATE KEY" | grep -B 100 "END PRIVATE KEY" >> client.ovpn # echo "</key>" >> client.ovpn Multiple Connection per Certificate https://serverfault.com/questions/128132/can-generated-openvpn-keys-be-used-on-multiple-clients Revoke https://blog.remibergsma.com/2013/02/27/improving-openvpn-security-by-revoking-unneeded-certificates/ https://www.hackerway.ch/2013/01/11/how-to-successfully-revoke-an-openvpn-certificate/
