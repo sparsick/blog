@@ -1,6 +1,6 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
-baseurl = "https://example.com/"  # Include trailing slash
+baseurl = "https://blog.sandra-parsick.de/"  # Include trailing slash
 title = "Sandra's Blog"
 author = "Sandra Parsick"
 copyright = "Copyright © 2011–2020, Sandra Parsick; all rights reserved."

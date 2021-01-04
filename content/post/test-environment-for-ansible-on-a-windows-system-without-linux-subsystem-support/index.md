@@ -2,7 +2,7 @@
 title: 'Test Environment for Ansible on a Windows System Without Linux Subsystem Support'
 date: 2020-01-24
 #description: "Article description." # Description used for search engine.
-featured: false # Sets if post is a featured post, making appear on the home page side bar.
+featured: true # Sets if post is a featured post, making appear on the home page side bar.
 draft: false # Sets whether to render this page. Draft of true will not be rendered.
 toc: false # Controls if a table of contents should be generated for first-level links automatically.
 # menu: main
