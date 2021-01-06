@@ -1,0 +1,6 @@
+_id: '342'
+comment: Nice article. I tried to use it to see why my configuration was showing the
+  integration tests in the Jacoco unit test report and not in the integration test
+  Jacoco report. I posted my issue at http://stackoverflow.com/questions/37485133/have-integration-tests-in-jacoco-it-directory
+date: '2016-05-28 10:21:44'
+name: Stephane Eybert

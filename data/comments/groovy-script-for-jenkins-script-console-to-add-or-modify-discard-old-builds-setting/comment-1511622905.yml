@@ -1,0 +1,16 @@
+_id: '708'
+comment: 'Hi,
+
+
+  the property buildDiscarder is field of the class hudson.model.Job and the WorkflowMultiBranchProject
+  is a wrapper class that wraps many jobs. That''s the cause why it fails. You have
+  to adjust your code, so that you can iterate over a list of jobs.
+
+
+  Best regards,
+
+
+  Sandra'
+date: '2017-11-25 16:15:05'
+name: Sandra Parsick
+reply_to: '704'

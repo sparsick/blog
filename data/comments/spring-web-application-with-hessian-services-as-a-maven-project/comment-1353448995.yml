@@ -1,0 +1,29 @@
+_id: '29'
+comment: 'Hi Sandra,
+
+
+  Thank you for the response. However, I am still having an issue.
+
+
+  When I am running the HessianClient, I am getting this exception:
+
+  Exception in thread "main" org.springframework.remoting.RemoteConnectFailureException:
+  Cannot connect to Hessian remote service at [http://0.0.0.0:8080/hello-world/hessian/HelloWorldService];
+  nested exception is com.caucho.hessian.client.HessianConnectionException: HessianProxy
+  cannot connect to ''http://0.0.0.0:8080/hello-world/hessian/HelloWorldService
+
+
+  Here are the steps I did:
+
+  1. run "mvn clean package install"
+
+  2. start up tomcat -&gt; go to http://0.0.0.0:8080/manager to deploy the hello-world-war-1.0.0-SNAPSHOT.war  in
+  maven-spring-hessian/hello-world-war/target
+
+  3. Run HessianClient class in IntelliJ IDE.
+
+
+  Do I miss something?'
+date: '2012-11-20 23:03:15'
+name: aldi
+reply_to: '28'

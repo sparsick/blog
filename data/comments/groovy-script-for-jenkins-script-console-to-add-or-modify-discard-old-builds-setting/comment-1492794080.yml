@@ -1,0 +1,8 @@
+_id: '490'
+comment: 'Fails for me with:
+
+
+  groovy.lang.MissingPropertyException: No such property: buildDiscarder for class:
+  org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject'
+date: '2017-04-21 19:01:20'
+name: markrideamigos

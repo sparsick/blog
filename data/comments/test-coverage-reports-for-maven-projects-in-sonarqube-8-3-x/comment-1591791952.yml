@@ -1,0 +1,15 @@
+_id: '2544'
+comment: "Thank you for your comment. I can understand you that it seems that I go\
+  \ down in a \"because it's possible\" rabbit hole. \n\nI had two situations in my\
+  \ projects, where I needed this set up:\n\n1) Devs teams want to merge these both\
+  \ test report for \"beautifying\" the report (\"Management said, the test coverage\
+  \ must be 90% in SonarQube\"). \n2) The dev team uses the integration test phase\
+  \ for tests that need infrastructure like database etc.\n\nFor the first situation,\
+  \ I agree with you. This is the worst motivation to do it. \nIn the second situation,\
+  \ I'm fine with merging the test report because here integration tests could be\
+  \ for example repository tests including a database.\n\nIMHO, it's a pity that SonarQube\
+  \ removed the distinction in the test reports between unit tests, integration tests\
+  \ and overall tests."
+date: '2020-06-10 14:25:52'
+name: Sandra Parsick
+reply_to: '2543'

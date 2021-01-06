@@ -1,0 +1,6 @@
+_id: '27'
+comment: Can you include more documentation on how to start up the service itself.
+  I am trying to run the HessianClient but I believe that I need to start up the service
+  first.
+date: '2012-11-20 19:32:21'
+name: aldi

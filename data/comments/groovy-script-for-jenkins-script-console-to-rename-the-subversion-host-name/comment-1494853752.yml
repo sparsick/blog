@@ -1,0 +1,14 @@
+_id: '508'
+comment: 'Hi,
+
+
+  use the above Groovy script. It iterates throught all jobs (<code>Hudson.instance.items.each
+  { item -&gt;</code>) and update the SVN URLs per job (<code>item.scm = newScm</code>).
+
+
+  Greets,
+
+  Sandra'
+date: '2017-05-15 15:09:12'
+name: Sandra Parsick
+reply_to: '494'

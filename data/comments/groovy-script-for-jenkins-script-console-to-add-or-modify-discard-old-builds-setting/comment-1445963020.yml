@@ -1,0 +1,20 @@
+_id: '239'
+comment: "To work with folders (free plugin).\n\n\n\nimport hudson.model.*\n\n\n \
+  \ \ndisableChildren(Hudson.instance.items)\n\n\n\ndef disableChildren(items) {\n\
+  \  \n  def daysToKeep = 90\n  def numToKeep = 10\n  def artifactDaysToKeep = -1\n\
+  \  def artifactNumToKeep = -1\n  for (item in items) {\n    if (item.class.canonicalName\
+  \ != 'com.cloudbees.hudson.plugins.folder.Folder') {\n\t\n      println(\"=====================\"\
+  )\n      println(\"JOB: \" + item.name)\n      println(\"Job type: \" + item.getClass())\
+  \ \n      \n      \n     if(item.buildDiscarder == null) {\n        println(\"No\
+  \ BuildDiscarder\")\n        println(\"Set BuildDiscarder to LogRotator\")\n   \
+  \  } else {\n        println(\"BuildDiscarder: \" + item.buildDiscarder.getClass())\n\
+  \        println(\"Found setting: \" + \"days to keep=\" + item.buildDiscarder.daysToKeepStr\
+  \ + \"; num to keep=\" + item.buildDiscarder.numToKeepStr + \"; artifact day to\
+  \ keep=\" + item.buildDiscarder.artifactDaysToKeepStr + \"; artifact num to keep=\"\
+  \ + item.buildDiscarder.artifactNumToKeepStr)\n        println(\"Set new setting\"\
+  )\n      }\n \n      item.buildDiscarder = new hudson.tasks.LogRotator(daysToKeep,numToKeep,\
+  \ artifactDaysToKeep, artifactNumToKeep)\n      item.save()\n      println(\"\"\
+  )\n\n\n    } else {\n\tdisableChildren(((com.cloudbees.hudson.plugins.folder.Folder)\
+  \ item).getItems())\n    }\n  }\n}"
+date: '2015-10-27 17:23:40'
+name: "Rog\xE9rio Colferai"

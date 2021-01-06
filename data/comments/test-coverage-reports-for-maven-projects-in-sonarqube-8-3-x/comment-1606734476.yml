@@ -1,0 +1,15 @@
+_id: '3334'
+comment: 'Hi,
+
+
+  I don''t try it out because I run the SonarQube analyse after a successful Maven
+  build. But it should be possible, because Jacoco creates the report and SonarQube
+  should only show the results of this report.
+
+
+  Regards,
+
+  Sandra'
+date: '2020-11-30 12:07:56'
+name: Sandra Parsick
+reply_to: '3311'

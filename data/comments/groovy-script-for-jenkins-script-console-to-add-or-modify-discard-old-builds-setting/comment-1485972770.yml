@@ -1,0 +1,13 @@
+_id: '465'
+comment: 'Hi Sandra,
+
+
+  I am working on migrating and cleaning up of around 350 CI jobs. I am new to groovy
+  scripting. Is there a way I can get a crash course on how to navigate jenkins jobs.
+
+
+  For ex: After the migration I see that all the jobs have a default JDK in them instead
+  of custom JDK version. I need to script out groovy in such a way that I select my
+  custom JDK from the drop down of JDK list and set that for all the jobs.'
+date: '2017-02-01 19:12:50'
+name: sharat

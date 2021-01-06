@@ -1,0 +1,23 @@
+_id: '2543'
+comment: "I'm afraid that in my opinion you have gone down a little too deep into\
+  \ the \"because it's possible\" rabbit hole.\n\nWhile I'm 100% on board with not\
+  \ mixing the code coverage of integration and unit tests, I maintain that the solution\
+  \ is to *not measure integration test coverage at all*.\n\nYour integration tests\
+  \ should cover the requirements (i.e. are there enough representative examples of\
+  \ the use cases your system should provide?) and the question of how much code they\
+  \ cover in order to do that is completely beside the point.\n\nIt is easy to fall\
+  \ into the trap of measuring integration test coverage simply because the numbers\
+  \ are so easily attainable. Whenever we measure, we must let ourselves be guided\
+  \ by the question \"is this relevant and in which way does it reflect on the quality\
+  \ of my software?\" rather than simply measuring the things that are easy to measure.\n\
+  \nThe moment you start measuring integration test coverage, the question is: What\
+  \ does this number tell me?\n\nAnother question is: What is the desired/necessary\
+  \ coverage my integration tests should achieve? \n\nIn case your answer is: 100%\
+  \ (which is the only valid coverage goal for unit tests), the question becomes:\
+  \ \"Why have unit tests at all?\" \n\nIf your answer is any number below that (let's\
+  \ assume 70%, just for the argument's sake), the question becomes: \"How do I ensure\
+  \ that I am testing the relevant 70% of the system?\"\n\nSo, do yourself a favour,\
+  \ configure JaCoCo to just measure the coverage of your unit tests and simply ignore\
+  \ the integration tests for the purposes of code coverage!"
+date: '2020-06-10 13:14:59'
+name: eikelang

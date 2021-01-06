@@ -1,0 +1,9 @@
+_id: '30'
+comment: 'I finally get it to work after changing the hessian-config.xml in the hello-world-client.
+
+
+  I change the value of the service url to point to "hello-world-war-1.0.0-SNAPSHOT"
+  instead of just "hello-world"'
+date: '2012-11-20 23:48:50'
+name: aldi
+reply_to: '28'

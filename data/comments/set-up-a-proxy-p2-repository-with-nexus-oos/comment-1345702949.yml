@@ -1,0 +1,7 @@
+_id: '22'
+comment: I have added a proxy for a p2 repository. The proxy works fine (I can use
+  the provided nexus url in my target file), but nexus is not storing the data locally.
+  Is there something I miss? I want Nexus to cache the jars because of performance
+  and availability reasons.
+date: '2012-08-23 08:22:29'
+name: Sobeos

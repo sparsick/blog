@@ -1,0 +1,16 @@
+_id: '32'
+comment: 'Hi,
+
+
+  yes, that is a possible solution or you rename the war file to <em>hello-world</em>
+  and then you deploy it. I will adjust the Maven build that it generates a war file
+  with name <em>hello-world</em>.
+
+
+  Regards,
+
+
+  Sandra'
+date: '2012-11-21 07:49:21'
+name: Sandra Kosmalla
+reply_to: '30'

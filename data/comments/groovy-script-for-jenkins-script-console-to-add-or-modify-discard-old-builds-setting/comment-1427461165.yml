@@ -1,0 +1,7 @@
+_id: '82'
+comment: For some reason I can't post the modifications to your script, but I adjusted
+  it to take into account folders (free plugin). When processing items in a Jenkins
+  Groovy script one should always check the item type, and if it is a folder, process
+  recursively.
+date: '2015-03-27 13:59:25'
+name: Nico Mommaerts

@@ -1,0 +1,11 @@
+_id: '468'
+comment: "Hi Sharat,\n\nI studied the source code of Jenkins to find out which parameter\
+  \ I have to adjust. I recommend Intellij IDEA Community Edition or Netbeans for\
+  \ Groovy scripting (IMHO they support Groovy better than Eclipse) and set up a Maven\
+  \ project that has Jenkins Core and Jenkins Plugins (that you need) in its dependencies\
+  \ declaration (Here is an <a href=\"https://github.com/sparsick/scripts-jenkins-console/blob/master/pom.xml\"\
+  \ target=\"_blank\" rel=\"nofollow\">POM example</a>). \nI hope that helps.\n\n\
+  Best regards,\n\nSandra"
+date: '2017-02-02 20:27:11'
+name: Sandra Parsick
+reply_to: '466'
