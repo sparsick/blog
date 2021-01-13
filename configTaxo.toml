@@ -9,8 +9,8 @@ disabled = false
 simple = true
 
 [privacy.twitter]
-disabled = true
-enableDNT = true
+disabled = false
+enableDNT = false
 simple = true
 disableInlineCSS = true
 

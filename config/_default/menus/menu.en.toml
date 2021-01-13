@@ -27,6 +27,16 @@
   url = "about/"
   weight = -107
 
+[[main]]
+  name = "Site Notice"
+  url = "site-notice/"
+  weight = -106
+
+[[main]]
+  name = "Privacy Policy"
+  url = "privacy-policy/"
+  weight = -105
+
 # social menu links
 
 [[social]]
