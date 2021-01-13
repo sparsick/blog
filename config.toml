@@ -3,7 +3,7 @@
 baseurl = "https://blog.sandra-parsick.de/"  # Include trailing slash
 title = "Sandra's Blog"
 author = "Sandra Parsick"
-copyright = "Copyright © 2011–2020, Sandra Parsick; all rights reserved."
+copyright = "Copyright © 2011–2021, Sandra Parsick; all rights reserved."
 # canonifyurls = true
 paginate = 10
 theme = "github.com/chipzoller/hugo-clarity"
@@ -50,7 +50,7 @@ introDescription = "Software Developer, Consultant, Java Champion."
 # description = "" # set your site's description here. will be use for home page content meta tags (seo). Alternatively set this description in your homepage content file i.e content/_index.md. Whatever is set in the latter will take precedence
 
 # Google analytics Id
-ga_analytics = "XXXXXXXXXX"
+ga_analytics = "G-H21GJWYVHG"
 
 # Baidu analytics Id
 # baidu_analytics = "XXXXXXXX"
