@@ -121,7 +121,7 @@ languageMenuName = "🌐"
 # since = 2016
 
 [permalinks]
-  post = "/:year/:month/:day/:title/"
+  post = "/:year/:month/:day/:filename/"
 
 
 [staticman]
