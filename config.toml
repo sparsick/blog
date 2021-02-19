@@ -8,7 +8,7 @@ copyright = "Copyright © 2011–2021, Sandra Parsick; all rights reserved."
 paginate = 10
 theme = "github.com/chipzoller/hugo-clarity"
 
-disqusShortname = ""
+disqusShortname = "sparsickblog"
 
 DefaultContentLanguage = "en"
 # [languages]
@@ -122,10 +122,3 @@ languageMenuName = "🌐"
 
 [permalinks]
   post = "/:year/:month/:day/:filename/"
-
-
-[staticman]
-  endpoint = "https://staticman-parsick.herokuapp.com/v2/entry/"
-  username = "sparsick"
-  repository = "blog"
-  branch = "master"
