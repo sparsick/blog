@@ -21,7 +21,7 @@ tags:
 # comment: false # Disable comment if false.
 ---
 
-Some days ago, I passed my CKAD (Certified Kubernetes Application Developer) exam.
+Some days ago, I passed my [CKAD (Certified Kubernetes Application Developer) exam](https://www.credly.com/badges/7848d923-82cf-42be-a226-b20457cf981e).
 In this post I'd like to share the resources, that I used for my preparation.
 
 I started with reading the book [Kubernetes in Action, First Edition](https://www.manning.com/books/kubernetes-in-action-second-edition) to understand the concept of Kubernetes (k8s) under the hood.
