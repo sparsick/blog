@@ -35,7 +35,7 @@ But I don't think the training would be enough for exam preparation.
 
 When you read blog post about experiences with the KCAD exam, then the main point is that you have to be fast on the CLI.
 Therefore, I searcht for more exercises.
-I chose [CKAD Exercises by Dimitris-Ilias Gkanatsios] and [CKAD Practice Tests on Katacode test environment by Liptan Biswas](https://dev.to/liptanbiswas/ckad-practice-questions-4mpn) for the training of my muscle memory.
+I chose [CKAD Exercises by Dimitris-Ilias Gkanatsios](https://github.com/dgkanatsios/CKAD-exercises) and [CKAD Practice Tests on Katacode test environment by Liptan Biswas](https://dev.to/liptanbiswas/ckad-practice-questions-4mpn) for the training of my muscle memory.
 Train it with [`kubectl` auto-completion](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-autocomplete)
 Furthermore, I learnt some VIM commands, because you need to be fast in an editor and VIM is pre-installed on every environment I used for my preparation.
 
@@ -59,7 +59,7 @@ After I finished the simulator, I had a good feeling that I'm prepared for the r
 
 The simulator showed me that I had some understanding problems with two topics.
 I skimmed through the slides of [CKAD Crash Course by Benjamin Muschko](https://github.com/bmuschko/ckad-crash-course).
-There are exercises., too.
+There are exercises, too.
 For the case, you need more training.
 For me, these would have been my backup training, if I hadn't passed the exam.
 
