@@ -29,7 +29,7 @@ These authentications can be managed in Password Manager.
 But it remains cumbersome to log in with username and password.
 Especially with Git repositories, there is the possibility to authenticate using an SSH key and SSH can be configured to detect itself which key to use.
 
-Let's say we have two Git projects that need two different authentication. Both projects are accessible under two different domains, **example1.com** and **example2.com**. For each of the two projects, we generate a public/private SSH key pair (**id_example1** and **id_example2**).
+Let's say we have two Git projects that need two different authentication. Both projects are accessible under two different domains, **example1.com** and **example2.com**. For each of the two projects, we generate a public/private SSH key pair (`id_example1` and `id_example2`).
 
 ```shell
 $ ssh-keygen
@@ -57,7 +57,7 @@ The key's randomart image is:
 
 The private key is then located in the file `id_example1` and the public key in the file `id_example1.pub`. This public key must be stored in the respective Git management system or Git server, so that the authentication via SSH can work.
 
-Now it must be entered in the SSH configuration for which domain which key is to be used. For this, if not existing, a file config is created under $USER_HOME/.ssh and in it is entered for which domain which key is valid:
+Now it must be entered in the SSH configuration for which domain which key is to be used. For this, if not existing, a file config is created under `$USER_HOME/.ssh` and in it is entered for which domain which key is valid:
 
 ```shell
 Host example1.com
