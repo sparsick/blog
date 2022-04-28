@@ -1,8 +1,8 @@
 ---
 title: "Passing Variables Through GitLab Pipelines" # Title of the blog post.
-date: 2022-04-27 # Date of post creation.
+date: 2022-04-29 # Date of post creation.
 description: "Passing variable gitlab pipeline" # Description used for search engine.
-featured: false # Sets if post is a featured post, making appear on the home page side bar.
+featured: true # Sets if post is a featured post, making appear on the home page side bar.
 draft: true # Sets whether to render this page. Draft of true will not be rendered.
 toc: false # Controls if a table of contents should be generated for first-level links automatically.
 # menu: main
