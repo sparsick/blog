@@ -28,41 +28,38 @@ tags:
 # comment: false # Disable comment if false.
 ---
 
-In this blog post I'd like to demonstrate how I integrate Testcontainers in Spring Boot tests for running UI tests with Selenium. 
-The sample project can be found on [GitHub](https://github.com/sparsick/testcontainers-spring-boot).
-
+In this blog post, I'd like to show how to integrate Testcontainers in Spring Boot tests for running UI tests with Selenium. 
 
 Why Testcontainers?
 -------------------
 
-Testcontainers is a library that helps to integrate infrastructure components like Selenium in integration tests based on Docker Container. 
+Testcontainers is a library that helps to integrate infrastructure components like Selenium or databases in integration tests based on Docker Container. 
 It helps to avoid writing integrated tests. 
 These are kind of tests that will pass or fail based on the correctness of another system. 
-In my case, Selenium. 
-With Testcontainers I have the control over this dependent system. 
+In this case, Selenium. 
+With Testcontainers we have the control over this dependent system. 
 
 If you want to learn how to write integration tests with database integration, please have a look on my blog post about [Using Testcontainers in Spring Boot Tests For Database Integration Tests](https://blog.sandra-parsick.de/2020/05/21/using-testcontainers-in-spring-boot-tests-for-database-integration-tests/)
-
 
 
 Introducing the Subject Under Test
 ---------------------------------
 
-The sample project is a simple web application with an UI, based on Thymeleaf, Spring Boot and MySQL database. 
+The sample project is a simple web application with a UI, based on Thymeleaf, Spring Boot and MySQL database. 
 
 ![Structure of Hero Web app](HeroApp.drawio.png)
 
 
-Preparing a Test with the Whole Spring Boot Web Application
+Preparing a Test that starts the whole Spring Boot Web Application
 ----------------------
 
 We want to test the whole application including database. 
-Therefore, we need a JUnit5 test that load the complete Spring Boot context and a MySQL database.
+Therefore, we need a JUnit5 test that load the complete Spring Boot application context and a MySQL database.
 
-The first step is to set up the dependencies to the test libraries.
-In this case, JUnit5, Testcontainers and Spring Boot's test helper classes. 
+The first step is to set up the dependencies to the needed test libraries.
+In this case, they are JUnit5, Testcontainers and Spring Boot's test helper classes. 
 As build tool, we use Maven. 
-All test libraries provide so called [BOM "bill of material"](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies), that helps to avoid a version mismatch in our used dependencies. 
+All test libraries provide so called [BOM "bill of material"](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies), that helps to avoid a version mismatch in the used dependencies. 
 As database, we use MySQL. 
 Therefore, we use the Testcontainers' module `mysql` additional to the core module `testcontainers`. 
 It provides a predefined MySQL container. 
@@ -161,7 +158,7 @@ The last one is `@Testcontainers` .
 It is a JUnit5 extension provided by Testcontainers that manage starting and stopping the docker container during the test. 
 It checks if Docker is installed on the machine, starts and stops the container during the test. 
 But how Testcontainers knows which container it should start? Here, the annotation `@Container` helps. 
-It marks container that should manage by the Testcontainers extension. 
+It marks the container that should manage by the Testcontainers extension. 
 In this case, a `MySQLContainer` provided by Testcontainers module `mysql`. 
 This class provides a MySQL Docker container and handles such things like setting up database user, recognizing when the database is ready to use etc. 
 As soon as the database is ready to use, the database schema has to be set up.
@@ -179,7 +176,6 @@ spring.jpa.hibernate.ddl-auto=update
 
 Now, the whole application including a database is started if the test runs. 
 This test set up is similar to the test set up, I showed in my previous blog post about [Using Testcontainers in Spring Boot Tests For Database Integration Tests](https://blog.sandra-parsick.de/2020/05/21/using-testcontainers-in-spring-boot-tests-for-database-integration-tests/#testing-the-whole-web-application-including-database)
-
 
 In the next section, I will demonstrate how to add Selenium for the UI testing.
 
@@ -279,7 +275,7 @@ class HeroStartPageIT {
 
 Let's go through this test step by step.
 
-As first step, we add 'BrowserWebDriverContainer' with the annotation `@Container`, so that the Selenium container is managed by Testcontainer. 
+As first step, we add `BrowserWebDriverContainer` with the annotation `@Container`, so that the Selenium container is managed by Testcontainer. 
 The next step is to configure the Selenium container can access to the Spring Boot application that is started on the host.
 Therefore, we have to configure that the container has access to the host (`.withAccessToHost(true)`).
 But this is not enough. 
@@ -312,6 +308,16 @@ The most important part is to know how to access the web page, because Selenium 
 Testcontainers provides a dedicated host name `host.testcontainers.internal` for this use case.
 So the Spring Boot application is reachable under `http://host.testcontainers.internal:" + heroPort + "/hero"` and we have everything together to write a test for the web page.
 
+```java
+@Test
+void titleIsHeroSearchMachine(){
+    browser.get("http://host.testcontainers.internal:" + heroPort + "/hero");
+    WebElement title = browser.findElement(By.tagName("h1"));
+    assertThat(title.getText().trim())
+            .isEqualTo("Hero Search Machine");
+}
+```
+
 
 Conclusion and Overview
 -----------------------
@@ -328,4 +334,4 @@ Further Information
 3. [Testcontainers - Networking and communicating with containers](https://www.testcontainers.org/features/networking/)
 4. [Spring Boot - Testing With a Running Server](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#features.testing.spring-boot-applications.with-running-server)
 5. [Full example in GitHub repository](https://github.com/sparsick/testcontainers-spring-boot)
-6. [Using Testcontainers in Spring Boot Tests For Database Integration Tests](https://blog.sandra-parsick.de/2020/05/21/using-testcontainers-in-spring-boot-tests-for-database-integration-tests/)
+6. Blog Post [Using Testcontainers in Spring Boot Tests For Database Integration Tests](https://blog.sandra-parsick.de/2020/05/21/using-testcontainers-in-spring-boot-tests-for-database-integration-tests/)
