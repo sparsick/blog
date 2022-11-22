@@ -1,5 +1,5 @@
 ---
-title: "Using Testcontainer in Spring Boot Tests combined with JUnit5 for Selenium Tests" # Title of the blog post.
+title: "Using Testcontainers in Spring Boot Tests combined with JUnit5 for Selenium Tests" # Title of the blog post.
 date: 2022-11-21T10:01:42+01:00 # Date of post creation.
 description: "Running Selennium Tests with Testcontainers and JUnit5 in Spring Boot Tests" # Description used for search engine.
 featured: false # Sets if post is a featured post, making appear on the home page side bar.
@@ -158,8 +158,8 @@ The last one is `@Testcontainers` .
 It is a JUnit5 extension provided by Testcontainers that manage starting and stopping the docker container during the test. 
 It checks if Docker is installed on the machine, starts and stops the container during the test. 
 But how Testcontainers knows which container it should start? Here, the annotation `@Container` helps. 
-It marks the container that should manage by the Testcontainers extension. 
-In this case, a `MySQLContainer` provided by Testcontainers module `mysql`. 
+It marks the container that should manage by the Testcontainers' extension. 
+In this case, a `MySQLContainer` provided by Testcontainers' module `mysql`. 
 This class provides a MySQL Docker container and handles such things like setting up database user, recognizing when the database is ready to use etc. 
 As soon as the database is ready to use, the database schema has to be set up.
 `MySQLContainer` database is static, because the container has to start before the application context starts, so that we have a change to pass the database connection configuration to the application context. 
@@ -275,12 +275,12 @@ class HeroStartPageIT {
 
 Let's go through this test step by step.
 
-As first step, we add `BrowserWebDriverContainer` with the annotation `@Container`, so that the Selenium container is managed by Testcontainer. 
+As first step, we add `BrowserWebDriverContainer` with the annotation `@Container`, so that the Selenium container is managed by Testcontainers. 
 The next step is to configure the Selenium container can access to the Spring Boot application that is started on the host.
 Therefore, we have to configure that the container has access to the host (`.withAccessToHost(true)`).
 But this is not enough. 
 We also have to expose the host port of the Spring Boot application to the Selenium container.
-Testcontainer prepares a static helper method for this use case (`Testcontainers.exposeHostPorts(heroPort)`).
+Testcontainers prepares a static helper method for this use case (`Testcontainers.exposeHostPorts(heroPort)`).
 But how to get the host port of the Spring Boot application?
 Spring Boot test module has a test utility annotation `@LocalServerPort`. 
 So it is sufficient that a class property have this annotation, so that Spring Boot can register the port number to this class property.
@@ -301,7 +301,7 @@ browser = new RemoteWebDriver(seleniumContainer.getSeleniumAddress(), new Chrome
 browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 ```
 First at all, it needs the address of the Selenium container (`seleniumContainer.getSeleniumAddress()`) and which browser it should simulate (here, a Chrome browser `new ChromeOptions()`).
-Also, we configure an explicit timeout to avoid `TimeoutException`  (see also Testcontainer's [issue](https://github.com/testcontainers/testcontainers-java/issues/5833))
+Also, we configure an explicit timeout to avoid `TimeoutException`  (see also Testcontainers' [issue](https://github.com/testcontainers/testcontainers-java/issues/5833))
 
 The last step is to write a test.
 The most important part is to know how to access the web page, because Selenium is running in a container and the Spring Boot application runs on the host.
