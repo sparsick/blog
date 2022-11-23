@@ -131,7 +131,7 @@ import ...
 
 @SpringBootTest
 @Testcontainers
-class HeroStartPageIT {
+class HeroStartPageSeleniumIT {
     @Container
     private static MySQLContainer database = new MySQLContainer("mysql:5.7.34");
 
@@ -229,7 +229,7 @@ import ...
 
 @Testcontainers
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-class HeroStartPageIT {
+class HeroStartPageSeleniumIT {
 
     @Container
     private static final BrowserWebDriverContainer<?> seleniumContainer = new BrowserWebDriverContainer<>() // one browser for all tests
