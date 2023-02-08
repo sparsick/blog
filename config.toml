@@ -3,7 +3,7 @@
 baseurl = "https://blog.sandra-parsick.de/"  # Include trailing slash
 title = "Sandra's Blog"
 author = "Sandra Parsick"
-copyright = "Copyright © 2011–2021, Sandra Parsick; all rights reserved."
+copyright = "Copyright © 2011–2023, Sandra Parsick; all rights reserved."
 # canonifyurls = true
 paginate = 10
 theme = "github.com/chipzoller/hugo-clarity"
