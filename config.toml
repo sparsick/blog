@@ -8,8 +8,6 @@ copyright = "Copyright © 2011–2023, Sandra Parsick; all rights reserved."
 paginate = 10
 theme = "github.com/chipzoller/hugo-clarity"
 
-disqusShortname = "sparsickblog"
-
 DefaultContentLanguage = "en"
 # [languages]
 # config/_default/languages.toml
