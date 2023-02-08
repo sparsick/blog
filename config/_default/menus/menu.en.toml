@@ -49,13 +49,18 @@
   weight = 2
   url = "https://twitter.com/SandraParsick"
 [[social]]
-  name = "linkedin"
+  name = "mastodon"
   weight = 3
+  url = "https://mastodon.social/@sparsick/"
+[[social]]
+  name = "linkedin"
+  weight = 4
   url = "https://www.linkedin.com/in/sandra-parsick-589a6b20/"
 [[social]]
   name = "rss"
-  weight = 4
+  weight = 5
   url = "index.xml"
+
 
 # other supported social links
 # name = "youtube"
